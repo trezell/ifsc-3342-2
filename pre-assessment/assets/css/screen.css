@@ -1,0 +1,137 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/*This rule ensures that your page is displayed the same on all browsers which resets margin and padding on all elements*/
+body {
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-image: url("../img/bg-tile.jpg");
+	background-repeat: repeat-x;
+	background-color: #171717;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+#container {
+	max-width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+	background-color: #FFF;
+	margin-top: 20px;
+	border: 1px solid #CCC;
+}
+#header h1 a {
+	display: block;
+	width:800px;
+	height:140px;
+	background-image: url("../img/headerimg.jpg");
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#nav {
+	background-color: #000;
+}
+#nav ul {
+	list-style-type: none;
+	margin-left: 10px;
+}
+#nav ul li {
+	display: inline;
+	height: 35px;
+	line-height: 35px;
+}
+#nav ul li a {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 18px;
+}
+#nav ul li a:link, #nav ul li a:visited {
+	text-decoration: none;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	color:#73AD21;
+}
+#nav ul li a:hover {
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+#content {
+	margin: 20px;
+}
+#content p {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+#footer {
+	background-color: #000;
+	color: #FFF;
+	height: 25px;
+}
+#footer h6 {
+	font-size: 12px;
+	line-height: 25px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.alert{
+	background-color:rgb(9, 104, 72);
+	padding:5px;
+	color:#73AD21;
+	clear:both;
+	border-style: ridge;
+	border-radius:25px;
+	text-align:center;
+}
+h2{
+	font-size: 2.8rem;
+	border-style: ridge;
+	border-radius:25px;
+	padding: 60px;
+	text-align: center;
+	margin:auto;
+}
+h3{
+	font-size:1.8rem;
+	color:#0c3f20;
+	border-radius: 25px;
+	border: 2px dotted #73AD21;
+	padding: 20px;
+	width: 200px;
+	height: auto;
+	text-align: center;
+	margin:60px 0 60px 140px ;
+}
+h4{
+	font-size:1.2rem;
+	color:azure;
+	border-radius: 25px;
+	background:#171717;
+	padding:10px;
+	width:auto;
+	height:auto;
+	text-align:center;
+	margin:auto;
+}
+
+.img-right {
+	float:right;
+	border-style: ridge;
+	margin:10px 0 10px 20px;
+}
+#content a{
+	color:#bff108;
+    text-decoration:none;
+    background-color:#0c3f20;
+    padding:6px 12px;
+    border-radius: 20px 8px 20px 8px;
+    transition:.6;
+}
+#content a:hover, #content a:active{
+	background-color:#73AD21;
+}
