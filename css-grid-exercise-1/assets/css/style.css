@@ -29,21 +29,21 @@ html {
   background-image:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/7248/grid-1.png");*/
 
   main{
-    width:960px;
+    width:80vw;
     margin:2vh auto;
     border:1px solid #000;
-    background-image:url(../img/grid1.png);
     display:grid;
     grid-template-columns:repeat(12,1fr);
     gap:20px;
     padding:0;
+    background-color:rgba(230, 79, 79, 1);
   }
   header.primary, footer.primary{
     /*width:920px; which is 920/960=95.83%*/
     width:95.83%;
     /*margin:20px=2.083%*/
     margin:2.083%;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(208, 235, 57, 0.348);
     
     /*padding:20px; which is 20/920 NOT 960 = 2.173%*/
     padding:2.173%;
@@ -51,29 +51,27 @@ html {
   }
   #content{
     grid-column: 1 / span 12;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(230, 79, 79, 0.4);
     display:grid;
     grid-template-columns: repeat (12,1fr);
-    padding:0;
+    padding:2.173%;
     grid-gap:20px;
   }
   #blog{
     /*width:604px; which is 604/960=62.91%*/
-    width:62.91%;
+    
     background-color: rgba(0,0,0,.4);
     /*padding:20px; which is 20/604=3.311%*/
-    padding:3.311%;
-    margin-left:2.083%;
+    padding:20px;
     grid-column: 1 / span 8;
     grid-row:1;
   }
   aside{
     /*width:292px; which is 292/960=30.41%*/
-    width:30.41%;
+    
     background-color: rgba(0,0,0,.4);
     /*padding:20px; which is 20/292=6.849%*/
-    padding:6.849%;
-    margin-left:2.083%;
-    grid-column: 8 / 12;
+    padding:20px;
+    grid-column: 9 / span 3;
     grid-row:1;
   }
