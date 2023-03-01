@@ -120,27 +120,85 @@ dd{
 /*video starts at 46:27*/
 
 
-#skills h2{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  font-weight:300;
-  font-variant: small-caps;
+#skills{
+  display:block;
+  position:relative;
+  margin:50px auto;;
+  padding:20px 30px 0; /* border space */
+  width:460px;
+  overflow:hidden;
 }
-#skills h2:before, #skills h2:after {
-  background-color: #010D00;
-  content: '\a0';
-  flex-grow: 1;
-  height: 2.5px;
-  position: relative;
-  top: 0.77em;
+#skills:before, #skills:after,.slanted-top:before{
+  position:absolute;
+  top:20px;
+  left:0;
+  border:solid transparent;
+  border-top-color:tan;
+  border-width:600px 0 0 30px; /* left border (top as max box height) */
+  width:0;
+  height:0;
+  content:"\a0";
 }
-#skills h2:before{
- margin-right:15px;
+#skills:after{
+  right:0;
+  left:auto;
+  border-width:600px 30px 0 10px; /* right border (top as max box height) */
 }
-#skills h2:after{
- margin-left:15px;
+.slanted-top:before{
+  position:absolute;
+  top:0;
+  border-color:transparent;
+  border-left-color:tan;
+  border-width:20px 0 0 600px; /* top border width+padding (left as box length) */
+}
+.slanted-top{
+  padding:10px;
+  background:tan; /* background-color same as borders */
+}
+
+#skills a{
+  display:block;
+  margin:1em;
+  text-decoration:none;
+  color: #010D00;
+  font-size:2.5em;
+  text-align:center;
+  
+}
+#skills a:hover{
+  height:3em;
+}
+
+.hide{
+display:none;
+}
+.hide dl{
+display:flex;
+flex-wrap: wrap;
+list-style:none;
+justify-content: center;
+text-align:center;
+}
+.hide dl dt{
+font-size: 3rem;
+/*****CENTER TEXT NOT WORKING*****/
+list-style:none;
+justify-content: center;
+padding:25px;
+text-align:center;
+border:1px solid #000;
+border-radius: 50px 25px;
+background-color:#667353;
+}
+
+#skills a:hover + .hide{
+display: block;
+color: #010D00;
+}
+
+#skills a:hover + .hide{
+display: block;
+color: #010D00;
 }
 
 
@@ -165,4 +223,80 @@ dd{
 }
 #experience h2:after{
  margin-left:15px;
+}
+/*********education**********/
+#education h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+}
+#education h2:before, #education h2:after {
+  background-color: #010D00;
+  content: '\a0';
+  flex-grow: 1;
+  height: 2.5px;
+  position: relative;
+  top: 0.77em;
+}
+#education h2:before{
+ margin-right:15px;
+}
+#education h2:after{
+ margin-left:15px;
+}
+.related-links{
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  padding:0;
+}
+.related-links .svg-inline--fa{
+  font-size:1.8em;
+  padding-top:7px;
+}
+
+.related-links a{
+  border:1px solid #000;
+  padding:8px 16px;
+  text-align:center;
+  text-decoration:none;
+  color:#222222;
+  text-transform:uppercase;
+  font-size:.75em;
+  background:rgba(0,0,0,.65);
+  transition: background-color 0.5s ease;
+  color:#fff;
+}
+
+.related-links a:hover{
+  background:rgba(127, 140, 108, .95);
+}
+
+.related-links li{
+  margin-right:20px;
+}
+.job, .certificate{
+  border-bottom:1px solid #667353;
+  padding-bottom:20px;
+}
+
+.job *[itemprop="jobTitle"], 
+.job *[itemprop="name"], 
+.job *[itemprop="url"], 
+.job *[itemprop="addressLocality"],
+.certificate *[itemprop="name"]
+{
+  display:block;
+}
+
+.job h3{
+  margin:20px 0 0 0;
+}
+
+footer{
+  text-align:center;
+padding:20px 0;
 }
