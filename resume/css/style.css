@@ -58,18 +58,19 @@ nav{
   padding:20px 20px 0px 20px;
 }
 nav a:link, nav a:visited{
-  border:1px solid #000;
+  /*border:1px solid #000;*/
   padding:8px 16px;
   text-align:center;
   text-decoration:none;
   color:#00010D;
   font-size:1em;
   background:rgba(102, 115, 83, .65);
-  transition: background-color .5s ease;
+  transition: background-color .7s ease;
   color:#fff;
 }
 nav a:hover{
   background:rgba(1, 13, 0,.75);
+  border: 2px solid #010D00
 }
 
 main{
@@ -115,4 +116,53 @@ dd{
   grid-column: 2;
   padding: 10px 0;
   border-bottom:1px solid #667353;
+}
+/*video starts at 46:27*/
+
+
+#skills h2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:300;
+  font-variant: small-caps;
+}
+#skills h2:before, #skills h2:after {
+  background-color: #010D00;
+  content: '\a0';
+  flex-grow: 1;
+  height: 2.5px;
+  position: relative;
+  top: 0.77em;
+}
+#skills h2:before{
+ margin-right:15px;
+}
+#skills h2:after{
+ margin-left:15px;
+}
+
+
+#experience h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+}
+#experience h2:before, #experience h2:after {
+  background-color: #010D00;
+  content: '\a0';
+  flex-grow: 1;
+  height: 2.5px;
+  position: relative;
+  top: 0.77em;
+}
+#experience h2:before{
+ margin-right:15px;
+}
+#experience h2:after{
+ margin-left:15px;
 }
