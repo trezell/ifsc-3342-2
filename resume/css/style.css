@@ -124,85 +124,179 @@ dd{
 
 
 #skills{
-  display:block;
-  position:relative;
-  margin:50px auto;;
-  padding:20px 30px 0; /* border space */
-  width:460px;
-  overflow:hidden;
+    display:block;
+    position:relative;
+    margin:50px auto;;
+    padding:20px 30px 0; /* border space */
+    width:460px;
+    overflow:hidden;
 }
 #skills:before, #skills:after,.slanted-top:before{
-  position:absolute;
-  top:20px;
-  left:0;
-  border:solid transparent;
-  border-top-color:tan;
-  border-width:600px 0 0 30px; /* left border (top as max box height) */
-  width:0;
-  height:0;
-  content:"\a0";
+    position:absolute;
+    top:20px;
+    left:0;
+    border:solid transparent;
+    border-top-color:tan;
+    border-width:600px 0 0 30px; /* left border (top as max box height) */
+    width:0;
+    height:0;
+    content:"\a0";
 }
 #skills:after{
-  right:0;
-  left:auto;
-  border-width:600px 30px 0 10px; /* right border (top as max box height) */
+    right:0;
+    left:auto;
+    border-width:600px 30px 0 10px; /* right border (top as max box height) */
 }
 .slanted-top:before{
-  position:absolute;
-  top:0;
-  border-color:transparent;
-  border-left-color:tan;
-  border-width:20px 0 0 600px; /* top border width+padding (left as box length) */
+    position:absolute;
+    top:0;
+    border-color:transparent;
+    border-left-color:tan;
+    border-width:20px 0 0 600px; /* top border width+padding (left as box length) */
 }
 .slanted-top{
-  padding:10px;
-  background:tan; /* background-color same as borders */
+    padding:1px;
+    background:tan; /* background-color same as borders */
 }
 
 #skills a{
-  display:block;
-  margin:1em;
-  text-decoration:none;
-  color: #010D00;
-  font-size:2.5em;
-  text-align:center;
-  
+    display:block;
+    margin:.25em;
+    text-decoration:none;
+    color: #010D00;
+    font-size:2em;
+    text-align:center;
+    
 }
 #skills a:hover{
-  height:3em;
+    height:1em;
 }
 
 .hide{
-display:none;
+  display:none;
 }
-.hide dl{
-display:flex;
-flex-wrap: wrap;
-list-style:none;
-justify-content: center;
-text-align:center;
+.hide ul{
+  display:flex;
+  flex-wrap: wrap;
+  list-style:none;
+  justify-content: center;
+  text-align:center;
 }
-.hide dl dt{
-font-size: 3rem;
-/*****CENTER TEXT NOT WORKING*****/
-list-style:none;
-justify-content: center;
-padding:25px;
-text-align:center;
-border:1px solid #000;
-border-radius: 50px 25px;
-background-color:#667353;
-}
-
-#skills a:hover + .hide{
-display: block;
-color: #010D00;
+.hide ul li{
+  font-size: 1.5rem;
+  /*****CENTER TEXT NOT WORKING*****/
+  
+  list-style:none;
+  justify-content: center;
+  padding:15px;
+  text-align:center;
+  
 }
 
 #skills a:hover + .hide{
-display: block;
-color: #010D00;
+  display: block;
+  color: #010D00;
 }
+
+#skills a:hover + .hide{
+  display: block;
+  color: #010D00;
+}
+
+
+
+/* Basic resets */
+
+* { 
+	margin:0; padding:0; 
+	box-sizing: border-box;
+}
+
+body {
+margin: 50px auto 0;
+max-width: 800px;
+}
+
+li {
+
+	width: 50%;
+	float: left;
+	list-style-type: none;
+	padding: 0;
+}
+
+li:nth-child(even) { margin-bottom: 2em;}
+
+/* Styling an indeterminate progress bar */
+
+progress:not(value) {
+	
+}
+progress[value] {
+	/* Get rid of the default appearance */
+	appearance: none;
+	
+	border: none;
+	/*****************************************/
+	/* Add dimensions */
+	width: 100%; height: 20px;
+	 background-color: #667353;
+	  border-radius: 3px;
+	  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+	color: royalblue;
+	
+	position: relative;
+	margin: 0 0 .5em; 
+}
+progress[value]::-webkit-progress-bar {
+	background-color: tan;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+progress[value]::-webkit-progress-value {
+	position: relative;
+	
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	
+	/* Let's animate this */
+	animation: animate-stripes 5s linear infinite;
+}
+
+@keyframes animate-stripes { 100% { background-position: -100px 0; } }
+
+
+progress[value]::-webkit-progress-value:after {
+
+	content: '';
+	position: absolute;
+	
+	width:5px; height:5px;
+	top:7px; right:7px;
+	
+	background-color: tan;
+	border-radius: 100%;
+}
+/******************/
+progress[value]::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #010D00, #97A681);
+	
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	
+}
+/******************************/
 
 
 #experience h2 {
