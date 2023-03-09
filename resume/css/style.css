@@ -221,13 +221,6 @@ margin: 50px auto 0;
 max-width: 800px;
 }
 
-li {
-
-	width: 50%;
-	float: left;
-	list-style-type: none;
-	padding: 0;
-}
 
 li:nth-child(even) { margin-bottom: 2em;}
 
