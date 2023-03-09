@@ -233,9 +233,6 @@ li:nth-child(even) { margin-bottom: 2em;}
 
 /* Styling an indeterminate progress bar */
 
-progress:not(value) {
-	
-}
 progress[value] {
 	/* Get rid of the default appearance */
 	appearance: none;
@@ -442,7 +439,6 @@ main.container{
   header.container{
     max-width:800px;
   }
-}
 /*Nested Grid*/
   #about{
   display:grid;
@@ -460,6 +456,7 @@ main.container{
 }
 .related-links{
   grid-area:related;
-  border-bottom:1px solid #999;
+  border-bottom:1px solid #667353;
   padding-bottom:50px
+}
 }
