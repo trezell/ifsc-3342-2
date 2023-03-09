@@ -21,7 +21,7 @@ img{
 .container{
   margin:0 auto;
   background:rgba(0,0,0,.15);
-  width:460px;
+  
 }
 
 /* ------ Helper Classes -------*/
@@ -50,7 +50,8 @@ body{
   background-color:#97A681;
   color:#010D00;
   line-height:1.6;
-  font-size:1.7em;
+  font-size:1.5em;
+  
 }
 a:link, a:visited{
   color:#222;
@@ -79,6 +80,9 @@ nav a:hover{
 main{
  padding: 1px 20px;
 }
+/*****************GRID CONTAINER DEFINITION*****************/
+
+
 main h1 {
   display: flex;
   flex-direction: row;
@@ -126,9 +130,9 @@ dd{
 #skills{
     display:block;
     position:relative;
-    margin:50px auto;;
+    margin:20px auto;;
     padding:20px 30px 0; /* border space */
-    width:460px;
+    width:420px;
     overflow:hidden;
 }
 #skills:before, #skills:after,.slanted-top:before{
@@ -137,7 +141,7 @@ dd{
     left:0;
     border:solid transparent;
     border-top-color:tan;
-    border-width:600px 0 0 30px; /* left border (top as max box height) */
+    border-width:400px 0 0 30px; /* left border (top as max box height) */
     width:0;
     height:0;
     content:"\a0";
@@ -145,31 +149,31 @@ dd{
 #skills:after{
     right:0;
     left:auto;
-    border-width:600px 30px 0 10px; /* right border (top as max box height) */
+    border-width:400px 30px 0 10px; /* right border (top as max box height) */
 }
 .slanted-top:before{
     position:absolute;
     top:0;
     border-color:transparent;
     border-left-color:tan;
-    border-width:20px 0 0 600px; /* top border width+padding (left as box length) */
+    border-width:20px 0 0 400px; /* top border width+padding (left as box length) */
 }
 .slanted-top{
-    padding:1px;
+    padding:10px;
     background:tan; /* background-color same as borders */
 }
 
 #skills a{
     display:block;
-    margin:.25em;
+    margin:.75em;
     text-decoration:none;
     color: #010D00;
-    font-size:2em;
+    font-size:1.75em;
     text-align:center;
     
 }
 #skills a:hover{
-    height:1em;
+    height:2em;
 }
 
 .hide{
@@ -357,12 +361,12 @@ progress[value]::-moz-progress-bar {
 
 .related-links a{
   border:1px solid #000;
-  padding:8px 16px;
+  padding:8px 10px;
   text-align:center;
   text-decoration:none;
   color:#222222;
   text-transform:uppercase;
-  font-size:.75em;
+  font-size:.65em;
   background:rgba(0,0,0,.65);
   transition: background-color 0.5s ease;
   color:#fff;
@@ -396,4 +400,66 @@ progress[value]::-moz-progress-bar {
 footer{
   text-align:center;
 padding:20px 0;
+}
+
+main.container{
+  display:grid;
+  grid-gap:1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education"
+    "skills"
+    "experience";
+}
+.page-title{
+  grid-area:title;
+}
+#about{
+  grid-area:about;
+}
+#skills{
+  grid-area:skills;
+}
+#experience{
+  grid-area:experience;
+}
+#education{
+  grid-area:education;
+}
+
+/******************Media Queries******************/
+@media screen and (min-width:768px){
+  main.container{
+    max-width:800px;
+    grid-template-columns: 36.5% auto;
+    grid-template-areas:
+      "title title"
+      "about about"
+      "skills skills"
+      "experience education"
+  }
+  header.container{
+    max-width:800px;
+  }
+}
+/*Nested Grid*/
+  #about{
+  display:grid;
+  grid-gap:2em;
+  grid-template-columns: 350px 1fr auto;
+  grid-template-areas:
+    "bio details details"
+    "related related related";
+}
+.bio{
+  grid-area:bio;
+}
+.details{
+  grid-area:details;
+}
+.related-links{
+  grid-area:related;
+  border-bottom:1px solid #999;
+  padding-bottom:50px
 }
