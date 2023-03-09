@@ -2,12 +2,18 @@
 	margin: 0px;
 	padding: 0px;
 }
+img{
+	max-width:100%;
+}
 body{
     max-width: 800px;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: left;
 	background-color: #e9b4b4;
+	background-image: url("../img/lemon.png");
+	background-position:center 50px left;
+	background-repeat:no-repeat;
 	margin-top: 20px;
 	font-family: 'Poppins', sans-serif;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -27,7 +33,7 @@ h2{
 	text-align:center;
 	padding-bottom: 20px;
 	font-size:.9rem;
-	color: #e9f1c6;
+	color: #f854c1;
 }
 #nav ul{
 	padding:0;
@@ -55,3 +61,4 @@ h2{
 	background-color: rgb(248, 84, 193, .75);
 	color: rgb(231, 241, 86);
 }
+
