@@ -453,3 +453,83 @@ main.container{
   padding-bottom:50px
 }
 }
+/*********DESKTOP*******/
+@media screen and (min-width: 1200px){
+  main.container{
+    max-width:1200px;
+    grid-template-columns: 350px 1fr auto;
+    grid-template-areas:
+      "title title title"
+      "about about about"
+      "education education education"
+      "skills skills skills"
+      "experience experience experience"
+  }
+    header.container{
+      max-width:1200px;
+}
+    #about{
+      display:grid;
+      grid-gap:2em;
+      grid-template-columns: 350px 1fr auto;
+      grid-template-areas:
+        "bio bio details"
+        "related related related";
+      }
+  #education{
+    text-align:center;
+  }
+  #experience{
+    text-align:center;
+  }
+  #skills{
+  display:block;
+  position:relative;
+  margin:20px auto;
+  padding:20px 30px 0; /* border space */
+  width:420px;
+  overflow:hidden;
+}
+  #skills:before, #skills:after,.slanted-top:before{
+  position:absolute;
+  top:20px;
+  left:0;
+  border:solid transparent;
+  border-top-color:tan;
+  border-width:400px 0 0 30px; /* left border (top as max box height) */
+  width:0;
+  height:0;
+  content:"\a0";
+}
+  #skills:after{
+  right:0;
+  left:auto;
+  border-width:400px 30px 0 10px; /* right border (top as max box height) */
+}
+  .slanted-top:before{
+    position:absolute;
+    top:0;
+    border-color:transparent;
+    border-left-color:tan;
+    border-width:20px 0 0 400px; /* top border width+padding (left as box length) */
+}
+  .slanted-top{
+    padding:10px;
+    background:tan; /* background-color same as borders */
+  }
+} 
+/*----------------------Edge Case Tweaks-----------------------*/
+@media only screen and (max-width: 460px) {
+  .related-links li a svg{display:none;}
+  
+}
+
+@media only screen and (max-width: 395px) {
+.related-links{
+flex-direction:column;
+
+}
+.related-links a{
+display:block;
+  }  
+}
