@@ -278,8 +278,33 @@ img{
   gap:10px;
   padding:2.083%;
 }
-
-
+nav{
+  background-color:black;
+}
+nav ul{
+  list-style-type:none;
+  margin-left:10px;
+  text-align:center;
+}
+nav ul li{
+  display: inline;
+  line-height:35px;
+}
+nav ul li a{
+  display: inline-block;
+  padding-right:10px;
+  padding-left:10px;
+  font-size:1.8em;
+}
+nav ul li a:link, nav ul li a:visited {
+  text-decoration:none;
+  color: #7f7f7f;
+}
+nav ul li a:hover {
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
 /* ------ Helper Classes -------*/
 .visuallyhidden {
     border: 0;
@@ -326,4 +351,5 @@ img{
   color:white;
   font-size:4em;
   text-align:center;
+  margin:0;
 }
