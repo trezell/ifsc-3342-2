@@ -255,7 +255,7 @@ html {
 /* ------ Typography -------*/
 body{
   font-family: 'Genos', sans-serif;
-  background-color:#222;
+  background-color:#272828;
 }
 
 /* ------ Fluid Images -------*/
@@ -295,10 +295,11 @@ nav ul li a{
   padding-right:10px;
   padding-left:10px;
   font-size:1.8em;
+  
 }
 nav ul li a:link, nav ul li a:visited {
   text-decoration:none;
-  color: #7f7f7f;
+  color:#038C7F;
 }
 nav ul li a:hover {
 	border-bottom-width: 3px;
@@ -339,6 +340,7 @@ nav ul li a:hover {
 .content p{
   text-indent: 50px;
   font-size:1.3em;
+  font-family:'Raleway', sans-serif;
 }
 .arm{
   display: flex;
@@ -347,9 +349,31 @@ nav ul li a:hover {
 .iframe-container{
   display:flex;
 }
+
 .primary h1{
   color:white;
   font-size:4em;
   text-align:center;
   margin:0;
+}
+.primary h1 a{
+  display: block;
+  height:290px;
+  width:auto;
+  justify-content:center;
+	background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+  background-size: contain;
+  background-position: center; 
+}
+.video{
+  width:100%;
+  height:auto;
+  margin: 0 auto;
+  text-align:center;
 }
