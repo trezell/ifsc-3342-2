@@ -268,6 +268,9 @@ img{
 }
 
 /* ------ Utility Classes  -------*/
+/*===========================================================
+==============Pre-Mobile First==============================
+===========================================================
 .wrapper{
   margin:0 auto;
   background:#7f7f7f;
@@ -306,7 +309,7 @@ nav ul li a:hover {
 	border-bottom-style: solid;
 	border-bottom-color: #CCC;
 }
-/* ------ Helper Classes -------*/
+/* ------ Helper Classes -------
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -316,12 +319,12 @@ nav ul li a:hover {
     padding: 0;
     position: absolute;
     width: 1px;
-    white-space: nowrap; /* 1 */
+    white-space: nowrap; /* 1 
 }
 .box-header{
   text-align:center;
   width:95.83%;
-    /*margin:20px=2.083%*/
+    /*margin:20px=2.083%
   grid-column: 1 / span 12;
   margin:0;
   padding:0;
@@ -377,7 +380,7 @@ nav ul li a:hover {
   margin: 0 auto;
   text-align:center;
 }
-/*======About Me======*/
+/*======About Me======
 main h1 {
   display: flex;
   flex-direction: row;
@@ -405,7 +408,7 @@ dl{
   grid-template-rows:auto;
   grid-template-columns:8em 1fr;
   /*shorthand
-  grid-template: auto / 8em 1fr;*/
+  grid-template: auto / 8em 1fr;
 }
 dt{
   font-weight:800;
@@ -419,14 +422,14 @@ dd{
   padding: 10px 0;
   border-bottom:1px solid #37529c;
 }
-/* Basic resets */
+/* Basic resets 
 
 * { 
 	margin:0; padding:0; 
 	box-sizing: border-box;
 }
 
-/*********education**********/
+/*********education*********
 #education h2 {
   display: flex;
   flex-direction: row;
@@ -467,3 +470,202 @@ main.container{
 #education{
   grid-area:education;
 }
+=========END OF PRE-MOBILE FIRST*/
+
+/* Basic resets */
+/*==========================================================================
+============================================================================
+====================Mobile First: Basic Resets==============================
+============================================================================
+==========================================================================*/
+* { 
+	margin:0; padding:0; 
+	box-sizing: border-box;
+}
+
+body {
+margin: 8px auto 0;
+max-width: 800px;
+}
+.primary h1{
+  color:white;
+  font-size:4em;
+  text-align:center;
+  margin:0;
+}
+.primary h1 a{
+  display: block;
+  height:240px;
+  width:auto;
+  justify-content:center;
+	background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+  background-size: cover;
+  background-position: center; 
+}
+/* So in order to get the image to cover, I lose the ability for it to be
+responsive. If I leave it as background-size:contain it allows it to be
+responsive but it won't fill up the header space like I want it to */
+nav{
+  background-color:black;
+}
+nav ul{
+  list-style-type:none;
+  margin-left:10px;
+  text-align:center;
+}
+nav ul li{
+  display: inline;
+  line-height:35px;
+}
+nav ul li a{
+  display: inline-block;
+  padding-right:10px;
+  padding-left:10px;
+  font-size:2.8em;
+  
+}
+nav ul li a:link, nav ul li a:visited {
+  text-decoration:none;
+  color:#038C7F;
+}
+nav ul li a:hover {
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+/* ------ Helper Classes -------*/
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+/********************landing page**************************/
+.video{
+  width:auto;
+  height:auto;
+  margin: 0 auto;
+}
+/*******************Emptiness page************************/
+.wrapper{
+  margin:0 auto;
+  background:#7f7f7f;
+  padding:25px;
+}
+.box-header{
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+.box-header h1{
+  text-align:center;
+  font-size:3em; 
+  margin:10px;
+}
+.content p{
+  text-indent: 50px;
+  font-size:1.3em;
+  font-family:'Raleway', sans-serif;
+}
+.iframe-container{
+  display:flex;
+}
+
+/*******************About page************************/
+main h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+ }
+ main h1:before, main h1:after {
+   background-color: #010D00;
+   content: '\a0';
+   flex-grow: 1;
+   height: 2.5px;
+   position: relative;
+   top: 0.77em;
+ }
+main h1:before{
+  margin-right:15px;
+}
+main h1:after{
+  margin-left:15px;
+}
+dl{
+  display: grid;
+  grid-template-rows:auto;
+  grid-template-columns:8em 1fr;
+  /*shorthand*/
+  grid-template: auto / 8em 1fr;
+}
+dt{
+  font-weight:800;
+  grid-column: 1;
+  padding: 10px 0;
+  border-bottom:1px solid #725373;
+}
+dd{
+  margin:0;
+  grid-column: 2;
+  padding: 10px 0;
+  border-bottom:1px solid #37529c;
+}
+/*********education*********/
+#education h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+}
+#education h2:before, #education h2:after {
+  background-color: #1d6316;
+  content: '\a0';
+  flex-grow: 1;
+  height: 2.5px;
+  position: relative;
+  top: 0.77em;
+}
+#education h2:before{
+ margin-right:15px;
+}
+#education h2:after{
+ margin-left:15px;
+}
+main.container{
+  color:#038C7F;
+  display:grid;
+  grid-gap:1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education";
+}
+.page-title{
+  grid-area:title;
+}
+#about{
+  grid-area:about;
+}
+#education{
+  grid-area:education;
+}
+/*******************Noble page************************/
+/*******************Hall page************************/
+/*******************Other page************************/
