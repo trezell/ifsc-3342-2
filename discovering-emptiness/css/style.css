@@ -294,7 +294,7 @@ nav ul li a{
   display: inline-block;
   padding-right:10px;
   padding-left:10px;
-  font-size:1.8em;
+  font-size:2.8em;
   
 }
 nav ul li a:link, nav ul li a:visited {
@@ -376,4 +376,94 @@ nav ul li a:hover {
   height:auto;
   margin: 0 auto;
   text-align:center;
+}
+/*======About Me======*/
+main h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+ }
+ main h1:before, main h1:after {
+   background-color: #010D00;
+   content: '\a0';
+   flex-grow: 1;
+   height: 2.5px;
+   position: relative;
+   top: 0.77em;
+ }
+main h1:before{
+  margin-right:15px;
+}
+main h1:after{
+  margin-left:15px;
+}
+dl{
+  display: grid;
+  grid-template-rows:auto;
+  grid-template-columns:8em 1fr;
+  /*shorthand
+  grid-template: auto / 8em 1fr;*/
+}
+dt{
+  font-weight:800;
+  grid-column: 1;
+  padding: 10px 0;
+  border-bottom:1px solid #725373;
+}
+dd{
+  margin:0;
+  grid-column: 2;
+  padding: 10px 0;
+  border-bottom:1px solid #37529c;
+}
+/* Basic resets */
+
+* { 
+	margin:0; padding:0; 
+	box-sizing: border-box;
+}
+
+/*********education**********/
+#education h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+}
+#education h2:before, #education h2:after {
+  background-color: #1d6316;
+  content: '\a0';
+  flex-grow: 1;
+  height: 2.5px;
+  position: relative;
+  top: 0.77em;
+}
+#education h2:before{
+ margin-right:15px;
+}
+#education h2:after{
+ margin-left:15px;
+}
+main.container{
+  color:#038C7F;
+  display:grid;
+  grid-gap:1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education";
+}
+.page-title{
+  grid-area:title;
+}
+#about{
+  grid-area:about;
+}
+#education{
+  grid-area:education;
 }
