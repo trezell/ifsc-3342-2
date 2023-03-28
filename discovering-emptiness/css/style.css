@@ -514,6 +514,7 @@ responsive. If I leave it as background-size:contain it allows it to be
 responsive but it won't fill up the header space like I want it to */
 nav{
   background-color:black;
+  border-style:double;
 }
 nav ul{
   list-style-type:none;
@@ -523,6 +524,9 @@ nav ul{
 nav ul li{
   display: inline;
   line-height:35px;
+  border-right-style:double;
+  border-width:medium;
+  border-color:white;
 }
 nav ul li a{
   display: inline-block;
