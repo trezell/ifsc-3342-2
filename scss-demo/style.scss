@@ -1,6 +1,7 @@
-$typeface:'Niramit', sans-serif;
-$background-color: #ccc;
+$typeface:'nunito', sans-serif;
+$background-color: #d290ec;
 $primary-color: #999;
+$secondary-color:#6debeb;
 $radius:10px;
 $margin:20px;
 
@@ -46,6 +47,7 @@ section {
     }
       h1 {
       margin-top: 0;
+      color: $secondary-color;
     }
   }
 }
