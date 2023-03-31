@@ -673,3 +673,75 @@ main.container{
 /*******************Noble page************************/
 /*******************Hall page************************/
 /*******************Other page************************/
+/*******************Emptiness 2 page************************/
+.fade-in-image {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.scene1-2 p{
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  text-indent: 50px;
+}
+.scene1-start p{
+  text-decoration: underline overline #c0c0c0;
+  text-align: center;
+  font-size:1.6em;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+}
+.scene2-1 p{
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  text-indent: 50px;
+}
+.fade-in-section {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: full-width;
+}
+
+.scene2-2 p {
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+}
+.scene2-3 p {
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  text-indent: 50px;
+}
+.scene3-1 p {
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  text-indent: 50px;
+}
