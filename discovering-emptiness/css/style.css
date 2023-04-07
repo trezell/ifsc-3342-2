@@ -754,21 +754,33 @@ main.container{
 .one{
   background-color: #fbf972a5;
   font-size:1.2em;
+  padding:12px;
+}
+.one p{
+  text-indent: 50px;
 }
 .two{
   background-color:black;
   color: #c0c0c0; 
+  padding:12px;
 }
+
 .three{
   background-color: #fbf972a5;
+  padding:12px;
 }
 #va-drinking{
   border: 5px ridge black;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 6px 12px 6px 20px;
   margin-left: 0.5rem;
+  margin-right:20px;
   float: right;
   width: 40%;
+  text-indent:20px;
+}
+#va-drinking ul li{
+  list-style:inside;
+  text-indent:20px;
 }
 .ptsd{
   display:inline; 
@@ -777,4 +789,14 @@ main.container{
 .close-header{
   text-align:center;
   background-image: url("../img/tornado1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+}
+#before{
+  padding:12px;
+}
+#before p{
+  text-indent: 50px;
 }
