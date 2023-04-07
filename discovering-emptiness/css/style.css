@@ -745,3 +745,36 @@ main.container{
   font-size:1.2em;
   text-indent: 50px;
 }
+/*=====================CLOSE CALL==================*/
+#content{
+  max-width:800px;
+  display: flex;
+  flex-direction: column;
+}
+.one{
+  background-color: #fbf972a5;
+  font-size:1.2em;
+}
+.two{
+  background-color:black;
+  color: #c0c0c0; 
+}
+.three{
+  background-color: #fbf972a5;
+}
+#va-drinking{
+  border: 5px ridge black;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: 0.5rem;
+  float: right;
+  width: 40%;
+}
+.ptsd{
+  display:inline; 
+  background-color: #fbf972a5;
+}
+.close-header{
+  text-align:center;
+  background-image: url("../img/tornado1.jpg");
+}
