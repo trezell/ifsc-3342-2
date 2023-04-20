@@ -1,0 +1,27 @@
+body{
+    background-color:#c0c0c0;
+    display: block;
+}
+.vid{
+    padding:10px;
+}
+.vid video{
+    padding:10px;
+    border:5px ridge;
+    background-color: #9b908e;
+}
+section{
+    width: 60%;
+    margin: 60px;
+}
+.aud h1{
+    color:black;
+    padding: 2px;
+    font-size: 24px;
+}
+.aud audio{
+    padding:10px;
+    border:5px ridge;
+    background-color: #9b908e;
+    margin: auto;
+}
