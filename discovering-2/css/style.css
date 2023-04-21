@@ -1,0 +1,802 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ------ Typography -------*/
+body{
+  font-family: 'Genos', sans-serif;
+  background-color:#272828;
+}
+
+/* ------ Fluid Images -------*/
+
+img{
+  max-width:100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------ Utility Classes  -------*/
+/*===========================================================
+==============Pre-Mobile First==============================
+===========================================================
+.wrapper{
+  margin:0 auto;
+  background:#7f7f7f;
+  width:80vw;
+  margin:2vh auto;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:10px;
+  padding:2.083%;
+}
+nav{
+  background-color:black;
+}
+nav ul{
+  list-style-type:none;
+  margin-left:10px;
+  text-align:center;
+}
+nav ul li{
+  display: inline;
+  line-height:35px;
+}
+nav ul li a{
+  display: inline-block;
+  padding-right:10px;
+  padding-left:10px;
+  font-size:2.8em;
+  
+}
+nav ul li a:link, nav ul li a:visited {
+  text-decoration:none;
+  color:#038C7F;
+}
+nav ul li a:hover {
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+/* ------ Helper Classes -------
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 
+}
+.box-header{
+  text-align:center;
+  width:95.83%;
+    /*margin:20px=2.083%
+  grid-column: 1 / span 12;
+  margin:0;
+  padding:0;
+}
+.box-header h1{
+  text-align:center;
+  font-size:3em; 
+  margin:10px;
+}
+.content{
+  grid-column: 1 / span 8;
+  display:grid;
+  grid-template-columns: repeat (12,1fr);
+  grid-gap:4px;
+  }
+.content p{
+  text-indent: 50px;
+  font-size:1.3em;
+  font-family:'Raleway', sans-serif;
+}
+.arm{
+  display: flex;
+  justify-content: center;
+}
+.iframe-container{
+  display:flex;
+}
+
+.primary h1{
+  color:white;
+  font-size:4em;
+  text-align:center;
+  margin:0;
+}
+.primary h1 a{
+  display: block;
+  height:290px;
+  width:auto;
+  justify-content:center;
+	background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+  background-size: contain;
+  background-position: center; 
+}
+.video{
+  width:100%;
+  height:auto;
+  margin: 0 auto;
+  text-align:center;
+}
+/*======About Me======
+main h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+ }
+ main h1:before, main h1:after {
+   background-color: #010D00;
+   content: '\a0';
+   flex-grow: 1;
+   height: 2.5px;
+   position: relative;
+   top: 0.77em;
+ }
+main h1:before{
+  margin-right:15px;
+}
+main h1:after{
+  margin-left:15px;
+}
+dl{
+  display: grid;
+  grid-template-rows:auto;
+  grid-template-columns:8em 1fr;
+  /*shorthand
+  grid-template: auto / 8em 1fr;
+}
+dt{
+  font-weight:800;
+  grid-column: 1;
+  padding: 10px 0;
+  border-bottom:1px solid #725373;
+}
+dd{
+  margin:0;
+  grid-column: 2;
+  padding: 10px 0;
+  border-bottom:1px solid #37529c;
+}
+/* Basic resets 
+
+* { 
+	margin:0; padding:0; 
+	box-sizing: border-box;
+}
+
+/*********education*********
+#education h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+}
+#education h2:before, #education h2:after {
+  background-color: #1d6316;
+  content: '\a0';
+  flex-grow: 1;
+  height: 2.5px;
+  position: relative;
+  top: 0.77em;
+}
+#education h2:before{
+ margin-right:15px;
+}
+#education h2:after{
+ margin-left:15px;
+}
+main.container{
+  color:#038C7F;
+  display:grid;
+  grid-gap:1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education";
+}
+.page-title{
+  grid-area:title;
+}
+#about{
+  grid-area:about;
+}
+#education{
+  grid-area:education;
+}
+=========END OF PRE-MOBILE FIRST*/
+
+/* Basic resets */
+/*==========================================================================
+============================================================================
+====================Mobile First: Basic Resets==============================
+============================================================================
+==========================================================================*/
+* { 
+	margin:0; padding:0; 
+	box-sizing: border-box;
+}
+
+body {
+margin: 8px auto 0;
+max-width: 800px;
+}
+.primary h1{
+  color:white;
+  font-size:4em;
+  text-align:center;
+  margin:0;
+}
+.primary h1 a{
+  display: block;
+  height:240px;
+  width:auto;
+  justify-content:center;
+	background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+  background-size: cover;
+  background-position: center; 
+}
+/* So in order to get the image to cover, I lose the ability for it to be
+responsive. If I leave it as background-size:contain it allows it to be
+responsive but it won't fill up the header space like I want it to */
+nav{
+  background-color:black;
+  border-style:double;
+}
+nav ul{
+  list-style-type:none;
+  margin-left:10px;
+  text-align:center;
+}
+nav ul li{
+  display: inline;
+  line-height:35px;
+  border-right-style:double;
+  border-width:medium;
+  border-color:white;
+}
+nav ul li a{
+  display: inline-block;
+  padding-right:10px;
+  padding-left:10px;
+  font-size:2.8em;
+  
+}
+nav ul li a:link, nav ul li a:visited {
+  text-decoration:none;
+  color:#038C7F;
+}
+nav ul li a:hover {
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+/* ------ Helper Classes -------*/
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+/********************landing page**************************/
+.video{
+  width:auto;
+  height:auto;
+  margin: 0 auto;
+}
+/*******************Emptiness page************************/
+.wrapper{
+  margin:0 auto;
+  background:#7f7f7f;
+  padding:25px;
+}
+.box-header{
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+.box-header h1{
+  text-align:center;
+  font-size:3em; 
+  margin:10px;
+}
+.content p{
+  text-indent: 50px;
+  font-size:1.3em;
+  font-family:'Raleway', sans-serif;
+}
+.iframe-container{
+  display:flex;
+}
+
+/*******************About page************************/
+main h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+ }
+ main h1:before, main h1:after {
+   background-color: #010D00;
+   content: '\a0';
+   flex-grow: 1;
+   height: 2.5px;
+   position: relative;
+   top: 0.77em;
+ }
+main h1:before{
+  margin-right:15px;
+}
+main h1:after{
+  margin-left:15px;
+}
+dl{
+  display: grid;
+  grid-template-rows:auto;
+  grid-template-columns:8em 1fr;
+  /*shorthand*/
+  grid-template: auto / 8em 1fr;
+}
+dt{
+  font-weight:800;
+  grid-column: 1;
+  padding: 10px 0;
+  border-bottom:1px solid #725373;
+}
+dd{
+  margin:0;
+  grid-column: 2;
+  padding: 10px 0;
+  border-bottom:1px solid #37529c;
+}
+/*********education*********/
+#education h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight:500;
+  font-variant:small-caps;
+}
+#education h2:before, #education h2:after {
+  background-color: #1d6316;
+  content: '\a0';
+  flex-grow: 1;
+  height: 2.5px;
+  position: relative;
+  top: 0.77em;
+}
+#education h2:before{
+ margin-right:15px;
+}
+#education h2:after{
+ margin-left:15px;
+}
+main.container{
+  color:#038C7F;
+  display:grid;
+  grid-gap:1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education";
+}
+.page-title{
+  grid-area:title;
+}
+#about{
+  grid-area:about;
+}
+#education{
+  grid-area:education;
+}
+/*******************Noble page************************/
+/*******************Hall page************************/
+/*******************Other page************************/
+/*******************Emptiness 2 page************************/
+.fade-in-image {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.scene1-2 p{
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  text-indent: 50px;
+}
+.scene1-start p{
+  text-decoration: underline overline #c0c0c0;
+  text-align: center;
+  font-size:1.6em;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+}
+.scene2-1 p{
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  text-indent: 50px;
+}
+.fade-in-section {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: full-width;
+}
+
+.scene2-2 p {
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+}
+.scene2-3 p {
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  text-indent: 50px;
+}
+.scene3-1 p {
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  text-indent: 50px;
+}
+/*=====================CLOSE CALL==================*/
+#content{
+  max-width:800px;
+  display: flex;
+  flex-direction: column;
+}
+.one{
+  background-color: #fbf972a5;
+  font-size:1.2em;
+  padding:12px;
+}
+.one p{
+  text-indent: 50px;
+}
+.two{
+  background-color:black;
+  color: #c0c0c0; 
+  padding:12px;
+}
+
+.three{
+  background-color: #fbf972a5;
+  padding:12px;
+}
+#va-drinking{
+  border: 5px ridge black;
+  padding: 6px 12px 6px 20px;
+  margin-left: 0.5rem;
+  margin-right:20px;
+  float: right;
+  width: 40%;
+  text-indent:20px;
+}
+#va-drinking ul li{
+  list-style:inside;
+  text-indent:20px;
+}
+.ptsd{
+  display:inline; 
+  background-color: #fbf972a5;
+}
+.close-header{
+  text-align:center;
+  background-image: url("../img/tornado1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+}
+#before{
+  padding:12px;
+}
+#before p{
+  text-indent: 50px;
+}
