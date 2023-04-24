@@ -1,0 +1,160 @@
+$bg-primary-color: #272828;
+$bg-secondary-color: #9b908e;
+$primary-color: #c0c0c0;
+$secondary-color: #1D9395;
+$tertiary-color: #824992;
+$margin: 20px;
+$navmargin: 6px;
+$padding: 10px;
+$typeface: 'Quicksand', sans-serif;
+$radius: 10px;
+$font-size: 1.1em;
+
+/****************************************************************************
+*******************************GLOBAL STYLES*********************************
+****************************************************************************/
+* { 
+	margin:0; padding:0; 
+	box-sizing: border-box;
+}
+
+body {
+margin: 8px auto 0;
+max-width: 480px;
+background-color: $bg-secondary-color;
+}
+
+.primary{
+    h1{
+        color:white;
+        font-size:4em;
+        text-align:center;
+        margin:0;
+        a{
+            display: block;
+            height: 180px;
+            justify-content:center;
+            background-image: url("../img/header.png");
+            background-repeat: no-repeat;
+            width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:0;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;   
+        }
+    }
+    nav{
+        background-color:$bg-primary-color;
+        ul{
+            list-style-type:none;
+            margin-left:10px;
+            text-align:center; 
+            li{
+                display: inline;
+                margin: $navmargin;
+                a{
+                    display: inline-block;
+                    padding: $padding;
+                    font-size:1.8em;
+                    border: 3px double $tertiary-color; 
+                    border-radius: $radius; 
+                }
+                a:link, a:visited{
+                    text-decoration: none;
+                    color: $secondary-color;
+                }
+                a:hover{
+                    background-color: $primary-color;
+                }
+            } 
+        }
+    }    
+}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+/* ------ Fluid Images -------*/ 
+img{
+    max-width:100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/****************************************************************************
+*******************************LANDING STYLES*********************************
+****************************************************************************/
+.vid{
+    margin-top: $margin;
+    margin-bottom: $margin;
+}
+.site-info{
+    font-family: $typeface;
+    text-indent: 30px;
+    font-size: $font-size;
+    #writing{
+        font-style: italic;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    
+}
+footer{
+    margin: $margin;
+    padding: $padding;
+    text-align: center;
+}
+
+/****************************************************************************
+*****************************EMPTINESS STYLES*******************************
+****************************************************************************/
+.wrapper{
+    margin: 0 auto;
+    background-color: $bg-primary-color;
+    font-family: $typeface;
+    .box-header{
+        text-align:center;
+        margin:0;
+        padding:0; 
+        h1{
+            text-align:center;
+            font-size:3em; 
+            margin:10px;
+            color: $bg-secondary-color;  
+        }
+    }
+    p{
+        text-indent: 50px;
+    }
+    .empty1{
+        #door{
+            text-align: center;
+            font-size:1.6em;
+            font-weight: bold;
+        }
+    }
+}
+.iframe-container{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color:red;
+    float:right;
+    padding:10px;
+  }
+/****************************************************************************
+********************************HALL STYLES**********************************
+****************************************************************************/
