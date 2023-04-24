@@ -114,13 +114,15 @@ footer {
 ****************************************************************************/
 .wrapper {
   margin: 0 auto;
+  padding: 10px;
   background-color: #272828;
   font-family: "Quicksand", sans-serif;
+  color: #9b908e;
 }
 .wrapper .box-header {
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 6px;
 }
 .wrapper .box-header h1 {
   text-align: center;
@@ -136,6 +138,15 @@ footer {
   font-size: 1.6em;
   font-weight: bold;
 }
+.wrapper .empty1 .arm {
+  padding: 6px;
+}
+.wrapper .empty6 .hands {
+  padding: 6px;
+}
+.wrapper .empty6 .tattoo {
+  padding: 6px;
+}
 
 .iframe-container {
   display: flex;
@@ -148,4 +159,262 @@ footer {
 
 /****************************************************************************
 ********************************HALL STYLES**********************************
-****************************************************************************//*# sourceMappingURL=style.css.map */
+****************************************************************************/
+.house-img {
+  padding: 6px;
+}
+
+.eyes-img {
+  padding: 6px;
+}
+
+.hall-img {
+  padding: 6px;
+}
+
+/****************************************************************************
+*******************************NOBLE STYLES**********************************
+****************************************************************************/
+.bed-img {
+  padding: 6px;
+}
+
+.road-img {
+  padding: 6px;
+}
+
+.mom-img {
+  padding: 6px;
+}
+
+/****************************************************************************
+****************************CLOSE CALL STYLES*******************************
+****************************************************************************/
+#content{
+    max-width:800px;
+    display: flex;
+    flex-direction: column;
+  }
+  .one{
+    background-color: #fbf972a5;
+    font-size:1.2em;
+    padding:12px;
+  }
+  .one p{
+    text-indent: 50px;
+  }
+  .one h1{
+    text-align: center;
+  }
+  .two{
+    background-color:#9b908e;
+    font-size:1.2em;
+    color: black; 
+    padding:12px;
+    
+  }
+  
+  .three{
+    background-color: #fbf972a5;
+    padding:12px;
+    font-size:1.2em;
+  }
+  #va-drinking{
+    border: 5px ridge black;
+    padding: 6px 12px 6px 20px;
+    margin-left: 0.5rem;
+    margin-right:20px;
+    margin-top:10px;
+    float: right;
+    width: 40%;
+    text-indent:20px;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+  }
+  #va-drinking ul li{
+    list-style:inside;
+    text-indent:20px;
+  }
+  .ptsd{
+    display:inline; 
+    background-color: #eeeb55a5;
+    font-family: 'Cormorant', serif;
+    font-size:1.2em;
+    padding-left:12px;
+  }
+  .close-header{
+    text-align:center;
+    background-image: url("../img/tornado1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    
+  }
+  #before{
+    padding:12px;
+  }
+  #before p{
+    text-indent: 50px;
+    margin-right:20px;
+    margin-left:20px;
+  }
+  /*figure{
+    border: 5px ridge black;
+    float: left;
+    margin-right: 20px;
+  }*/
+  figcaption{
+    text-align: center;
+  }
+  #flick{
+    border: 5px ridge black;
+    float: left;
+    margin-right: 20px;
+  }
+  nav{
+    background-color: #0f0f0f;
+  }
+  nav ul{
+    margin-left:10px;
+    text-align:center;
+  }
+  nav ul li{
+    text-decoration: none;
+    list-style-type: none;
+    display: inline;
+  }
+  nav ul li a{
+    display: inline-block;
+    padding-right:10px;
+    padding-left:10px;
+    font-size:2.8em;
+  }
+  nav ul li a:link, nav ul li a:visited {
+    text-decoration:none;
+    color:#6c7391;
+  }
+  nav ul li a:hover {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #CCC;
+  }
+  .click{
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .click:link, .click a:visited{
+    text-decoration:none;
+    color:#6c7391;
+  }
+  .click:hover {
+    border-width: 3px;
+    border-style: ridge;
+    border-color: #CCC;
+  }
+  #damage{
+    border: 5px ridge black;
+    float: right;
+    margin-right: 20px;
+  }
+  .ending-1{
+    text-indent: 50px;
+    margin-right:20px;
+    margin-left:20px;
+  }
+  .ending-2{
+    text-indent: 50px;
+    margin-right:20px;
+    margin-left:20px;
+  }
+  #guilt{
+    border: 5px ridge black;
+    padding: 6px 12px 6px 20px;
+    margin-left: 0.5rem;
+    margin-right:20px;
+    float: right;
+    width: 40%;
+    text-indent:20px;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+  }
+  #before{
+    display: inline;
+  }
+  #before h2{
+    text-align: center;
+  }
+  .call-img{
+    display: inline;
+    margin: auto;
+    padding: 0;
+    grid-column: 1 / span 4;
+    grid-row: 1;
+  }
+  .text-her{
+    border: 2px solid #bedede;
+    background-color: #919496;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    max-width:400px;
+  }
+  .text-me{
+    border: 2px solid #ccc;
+    background-color: #458C72;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    max-width:400px;
+    
+  }
+  .time-right {
+    float: right;
+    color: #fff;
+  }
+  .time-left {
+    float: left;
+    color: #fff;
+  }
+  .text-her, .text-me::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .text-her p{
+    color: #fff;
+    background-color: rgba(0,0,0,.5) 
+  }
+  .text-me p{
+    color: #fff;
+    background-color: rgba(0,0,0,.5) 
+  }
+  .call{
+    border: 2px solid #ccc;
+    grid-column: 5 / span 7;
+    grid-row: 1;
+  }
+  .call-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr)
+  }
+  #call{
+    font-size: 1.3em;
+  }
+  #title{
+    font-weight: 900;
+  }
+  .call-2{
+    border: 2px solid #ccc;
+    grid-column: 1 / span 7;
+    grid-row: 1;
+  }
+  .call-img2{
+    display: inline;
+    margin: auto;
+    padding: 0;
+    grid-column: 8 / span 4;
+    grid-row: 1;
+  }
+/*# sourceMappingURL=style.css.map */

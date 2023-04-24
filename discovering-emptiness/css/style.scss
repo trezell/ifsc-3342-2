@@ -6,6 +6,7 @@ $tertiary-color: #824992;
 $margin: 20px;
 $navmargin: 6px;
 $padding: 10px;
+$padding2: 6px;
 $typeface: 'Quicksand', sans-serif;
 $radius: 10px;
 $font-size: 1.1em;
@@ -123,12 +124,14 @@ footer{
 ****************************************************************************/
 .wrapper{
     margin: 0 auto;
+    padding: $padding;
     background-color: $bg-primary-color;
     font-family: $typeface;
+    color: $bg-secondary-color;
     .box-header{
         text-align:center;
         margin:0;
-        padding:0; 
+        padding:$padding2; 
         h1{
             text-align:center;
             font-size:3em; 
@@ -145,7 +148,19 @@ footer{
             font-size:1.6em;
             font-weight: bold;
         }
+        .arm{
+            padding: $padding2;
+        }
     }
+    .empty6{
+        .hands{
+            padding: $padding2;
+        }
+        .tattoo{
+            padding: $padding2;
+        }
+    }
+
 }
 .iframe-container{
     display:flex;
@@ -157,4 +172,28 @@ footer{
   }
 /****************************************************************************
 ********************************HALL STYLES**********************************
+****************************************************************************/
+.house-img{
+    padding: $padding2;
+}
+.eyes-img{
+    padding: $padding2;
+}
+.hall-img{
+    padding: $padding2;
+}
+/****************************************************************************
+*******************************NOBLE STYLES**********************************
+****************************************************************************/
+.bed-img{
+    padding: $padding2;
+}
+.road-img{
+    padding: $padding2;
+}
+.mom-img{
+    padding: $padding2;
+}
+/****************************************************************************
+****************************CLOSE CALL STYLES*******************************
 ****************************************************************************/
