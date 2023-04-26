@@ -191,7 +191,7 @@ footer {
 ****************************CLOSE CALL STYLES*******************************
 ****************************************************************************/
 #content{
-  max-width:800px;
+  width:460px;
   display: flex;
   flex-direction: column;
 }
@@ -562,5 +562,80 @@ main.container{
 /****************************************************************************
 ******************************MEDIA QUERIES**********************************
 ****************************************************************************/
-/********************EMPTINESS*******************/
+/*********************GLOBAL********************/
 /*******************Med-screen*******************/
+
+
+/*********************LANDING********************/
+/*******************Med-screen*******************/
+@media screen and (min-width:768px){
+  body{
+    max-width: 800px;
+  }
+  .primary h1 a{
+    max-width: 800px;
+    margin: 0 auto;
+    width: 800px;
+  }
+  .vid{
+    margin: 0;
+  }
+  video{
+    width: 800px;
+    height: 450px;
+  }
+  #writing{
+    color: #c0c0c0;
+    border: 3px dotted #1D9395;
+    background-color:#272828;
+  }
+}
+/*******************desktop-screen*******************/
+@media screen and (min-width: 1200px){
+  body{
+    max-width: 1280px;
+    background-color: #c0c0c0;
+  }
+  .primary{
+    background-color:#272828;
+    
+  }
+  .primary h1 a{
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 860px;
+  }
+  .primary nav ul li a{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .vid{
+    padding-top: 10px;
+  }
+  video{
+    width: 608px;
+    height: 342px;
+    float: right;
+  }
+  .site-info{
+    padding: 6px;
+    font-size: 1.2em;
+    background-color:#9b908e;
+    padding-top: 10px;
+  }
+  #writing{
+    float: left;
+    color: #c0c0c0;
+    border: 3px dotted #1D9395;
+    background-color:#272828;
+    width: 700px;
+    font-size: .8em;
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+  .media{
+    background-color:#9b908e;
+  }
+}
+/*********************CLOSE CALL********************/
+/*********************Med-screen********************/
