@@ -563,11 +563,6 @@ main.container{
 ******************************MEDIA QUERIES**********************************
 ****************************************************************************/
 /*********************GLOBAL********************/
-/*******************Med-screen*******************/
-
-
-/*********************LANDING********************/
-/*******************Med-screen*******************/
 @media screen and (min-width:768px){
   body{
     max-width: 800px;
@@ -577,20 +572,7 @@ main.container{
     margin: 0 auto;
     width: 800px;
   }
-  .vid{
-    margin: 0;
-  }
-  video{
-    width: 800px;
-    height: 450px;
-  }
-  #writing{
-    color: #c0c0c0;
-    border: 3px dotted #1D9395;
-    background-color:#272828;
-  }
 }
-/*******************desktop-screen*******************/
 @media screen and (min-width: 1200px){
   body{
     max-width: 1280px;
@@ -609,6 +591,26 @@ main.container{
     margin-bottom: 10px;
     margin-top: 10px;
   }
+}
+
+/*********************LANDING********************/
+/*******************Med-screen*******************/
+@media screen and (min-width:768px){
+  .vid{
+    margin: 0;
+  }
+  video{
+    width: 800px;
+    height: 450px;
+  }
+  #writing{
+    color: #c0c0c0;
+    border: 3px dotted #1D9395;
+    background-color:#272828;
+  }
+}
+/*******************desktop-screen*******************/
+@media screen and (min-width: 1200px){
   .vid{
     padding-top: 10px;
   }
