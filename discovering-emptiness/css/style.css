@@ -114,10 +114,11 @@ footer {
 ****************************************************************************/
 .wrapper {
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   background-color: #272828;
   font-family: "Quicksand", sans-serif;
   color: #9b908e;
+  font-size: 1.2em;
 }
 .wrapper .box-header {
   text-align: center;
@@ -530,6 +531,16 @@ dd{
   padding: 10px 0;
   border-bottom:1px solid #37529c;
 }
+.bio img{
+  margin-bottom: 10px;
+}
+.bio p{
+  margin-bottom: 10px;
+}
+#about{
+  margin-left: 20px;
+  margin-right: 20px;
+}
 /*********education*********/
 #education h2 {
   display: flex;
@@ -573,7 +584,12 @@ main.container{
 #education{
   grid-area:education;
   padding: 10px;
+  margin-bottom: 20px;
 }
+.details{
+  grid-area:details;
+}
+
 /*# sourceMappingURL=style.css.map */
 /****************************************************************************
 ********************************404 STYLES***********************************
@@ -851,4 +867,69 @@ main.container{
     padding: 6px;
     background: white;
   }
+}
+/*********************ABOUT********************/
+@media screen and (min-width:768px){
+  main.container{
+    grid-template-columns: 36.5% auto;
+    grid-template-areas:
+      "title title"
+      "about about"
+      "education education"
+  }
+  header.container{
+    max-width:800px;
+  }
+}
+/*@media screen and (min-width: 1200px){
+  #about{
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: auto 1fr 350px;
+    grid-template-areas:
+      "bio bio details";
+  }
+  .bio{
+    grid-area:bio;
+  }
+  .details{
+    grid-area:details;
+  }
+}*/
+@media screen and (min-width: 1200px){
+  main.container{
+    max-width:1280px;
+    grid-template-columns: 800px auto;
+    grid-template-areas:
+      "title title title"
+      "about about about"
+      "education education education";
+  }
+  header.container{
+    max-width:800px;
+  }
+  #about{
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: 800px auto;
+    grid-template-areas:
+      "bio bio details"
+      "related related related";
+  }
+  #education{
+    text-align:center;
+  }
+}
+/*********************EMPTINESS********************/
+@media screen and (min-width: 1200px){
+  .wrapper p{
+    font-size: 1.5em;
+  }
+  .hands img{
+    width: 40%;
+    float: right;
+  }
+ .iframe-container{
+  width: 50%;
+ }
 }
