@@ -191,12 +191,13 @@ footer {
 ****************************CLOSE CALL STYLES*******************************
 ****************************************************************************/
 #content{
-  width:460px;
+  max-width:800px;
   display: flex;
   flex-direction: column;
+  
 }
 .one{
-  background-color: #c0c0c0;
+  background-color: #9b908e;
   font-size:1.2em;
   padding:12px;
 }
@@ -206,12 +207,22 @@ footer {
 .one h1{
   text-align: center;
 }
+.one h2{
+  margin: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
 .two{
   background-color:#9b908e;
   font-size:1.2em;
   color: black; 
   padding:12px;
-  
+}
+.two h1{
+  text-align: center;
+}
+.two h2{
+  margin: 10px;
 }
 
 .three{
@@ -219,13 +230,17 @@ footer {
   padding:12px;
   font-size:1.2em;
 }
+.three h2{
+  margin: 10px;
+}
 #va-drinking{
   border: 5px ridge black;
-  padding: 3px;
+  padding: 6px;
+  margin-right:20px;
+  margin-left:20px;
   margin-top:10px;
-  text-indent:16px;
+  text-indent:20px;
   font-family: 'Cormorant', serif;
-  font-style: italic;
 }
 #va-drinking ul li{
   list-style:inside;
@@ -236,8 +251,7 @@ footer {
   background-color: #9b908e;
   font-family: 'Cormorant', serif;
   font-size:1.2em;
-  padding-left:12px;
-  margin-right:20px;
+  
 }
 .close-header{
   text-align:center;
@@ -250,20 +264,28 @@ footer {
 }
 #before{
   padding:12px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 #before p{
   text-indent: 50px;
   margin-right:20px;
   margin-left:20px;
 }
+/*figure{
+  border: 5px ridge black;
+  float: left;
+  margin-right: 20px;
+}*/
 figcaption{
   text-align: center;
+  margin-bottom: 10px;
 }
 #flick{
   border: 5px ridge black;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 nav{
   background-color: #0f0f0f;
@@ -307,26 +329,35 @@ nav ul li a:hover {
   border-color: #CCC;
 }
 #damage{
-  border: 5px ridge black;
-  float: right;
-  margin-right: 6px;
-  background-color:#272828;
+  border: 5px ridge black;    
+  background-color:#9b908e;
   color: #c0c0c0;
+  padding: 10px;
 }
 .ending-1{
+  margin-right:20px;
+  margin-left:20px;
+}
+.ending-1 p{
   text-indent: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.ending-1 h2{
+  text-align: center;
 }
 .ending-2{
   text-indent: 50px;
+  margin-right:20px;
+  margin-left:20px;
 }
 #guilt{
   border: 5px ridge black;
-  padding: 3px;
-  margin-top:10px;
-  text-indent:16px;
+  padding: 10px;
+  text-indent:20px;
   font-family: 'Cormorant', serif;
-  font-style: italic;
-  margin: 0;
+  margin-bottom: 6px;
+  margin-top: 6px;
 }
 #before{
   display: inline;
@@ -384,10 +415,13 @@ nav ul li a:hover {
   grid-column: 5 / span 7;
   grid-row: 1;
   background-color: #c0c0c0;
+  padding: 6px;
+  margin-left: 10px;
 }
 .call-container{
   display: grid;
-  grid-template-columns: repeat(12, 1fr)
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
 }
 #call{
   font-size: 1.3em;
@@ -400,6 +434,9 @@ nav ul li a:hover {
   grid-column: 1 / span 7;
   grid-row: 1;
   background-color: #c0c0c0;
+  padding: 6px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 .call-img2{
   display: inline;
@@ -409,8 +446,45 @@ nav ul li a:hover {
   grid-row: 1;
 }
 #lone1{
-  padding-top: 6px;
   background-color:#9b908e;
+}
+#reunited{
+  padding-left: 10px;
+}
+.f335 h2{
+  text-align: right;
+}
+#damage figcaption{
+  padding-top: 6px;
+  margin-top: 2px;
+  border: 2px dotted #c0c0c0;
+}
+#final h2{
+  padding: 6px;
+  text-align: center;
+}
+#final p{
+  margin-right: 20px;
+  margin-left: 20px;
+  text-indent: 50px;
+}
+#foxy{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.aud{
+  text-align: center;
+  border: 3px ridge #c0c0c0;
+  background-color: white;
+}
+audio{
+  border: 3px ridge #c0c0c0;
+}
+#storm{
+  font-size: 1.3em;
+}
+#afternoon-ending p{
+  text-indent: 50px;
 }
 /****************************************************************************
 *****************************ABOUT ME STYLES********************************
@@ -641,3 +715,140 @@ main.container{
 }
 /*********************CLOSE CALL********************/
 /*********************Med-screen********************/
+/*********************MORNING********************/
+@media screen and (min-width: 768px){
+  #flick{
+    float: right;
+    margin: 10px;
+  }
+  .one p{
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 1200px){
+  #content{
+    max-width: 1280px;
+  }
+  .one p{
+    padding: 20px;
+    font-size: 1.5em;
+  }
+}
+/*********************AFERNOON********************/
+@media screen and (min-width: 768px){
+  .f335 h2{
+    padding-right: 100px;
+  }
+  .two h1{
+    font-size: 3.2em;
+  }
+  .two h2{
+    font-size: 2.2em;
+  }
+  #lone{
+    font-size: 1.5em;
+  }
+  .text-her{
+    font-size: 1.3em;
+  }
+  .text-me{
+    font-size: 1.3em;
+  }
+  #tornado{
+    font-size: 1.5em;
+  }
+  .call{
+    font-size: 1.5em;
+  }
+  .call p:nth-child(odd){
+    background-color: #458C72;
+  }
+  .call p:nth-child(even){
+    background-color: #585757;
+  }
+  .call-2{
+    font-size: 1.5em;
+  }
+  .call-2 p:nth-child(even){
+    background-color: #458C72;
+  }
+  .call-2 p:nth-child(odd){
+    background-color: #585757;
+  }
+  #lone1{
+    font-size: 1.5em;
+  }
+  #reunited{
+    font-size: 3.0em;
+    color: #c0c0c0;
+  }
+  #afternoon-ending{
+    font-size: 1.5em;
+  }
+}
+/*********************LATER********************/
+@media screen and (min-width: 1200px){
+  #damage{
+    float: right;
+  }
+  .three h2{
+    font-size: 3.0em;
+  }
+  .three p{
+    font-size: 1.5em;
+  }
+}
+/*********************PTSD********************/
+@media screen and (min-width: 1200px){
+  #before h2{
+    font-size: 3.0em;
+  }
+  .ending-1 h2{
+    font-size: 3.0em;
+  }
+  #before p{
+    font-size: 1.5em;
+    padding: 6px;
+  }
+  .ending-1 p{
+    font-size: 1.5em;
+    padding: 6px;
+  }
+  .ending-2 p{
+    font-size: 1.5em;
+    padding: 6px;
+  }
+  #va-drinking p{
+    font-size: 1.1em;
+  }
+  #guilt{
+    width: 40%;
+    float: right;
+  }
+  #guilt p{
+    font-size: 1.1em;
+  }
+  #va-drinking{
+    width: 40%;
+    float: left;
+  }
+  #final h2{
+    font-size: 3em;
+  }
+  #final p{
+    font-size: 1.5em;
+  }
+  .aud{
+    float: left;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #foxy img{
+    height:1066.66px;
+    width: 800px;
+    border: 5px ridge #c0c0c0;
+    padding: 6px;
+    background: white;
+  }
+}
